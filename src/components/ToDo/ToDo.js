@@ -9,10 +9,10 @@ const ToDo = ({ToDoData, updateToDoList}) => {
     }
     return (
         <li className = "to-do" id = {ToDoData.id}>
-            <input type="checkbox" id = {ToDoData.id}  /> 
-            <label htmlFor={ToDoData.id}>{ToDoData.content}</label>
+            <input type="checkbox" /> 
+            <label >{ToDoData.content}</label>
             <button onClick = { e => handleClick(e.currentTarget.parentElement.id)}>
-                <img src={trash} alt = "trash "/>
+                <img src={trash} alt = "trash"/>
             </button>
         </li>
     )
