@@ -1,23 +1,38 @@
-import logo from './logo.svg';
 import './App.css';
+import Form from './components/Form/Form';
+import ToDoList from './components/ToDoList/ToDoList';
+import {useState} from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
+  const [state, setState] = useState([
+    {
+      content : "Do coding challenges",
+      id : uuidv4(),
+    },
+    {
+      content : "Drink coffee",
+      id : uuidv4(),
+    },
+    {
+      content : "Listen to music",
+      id : uuidv4(),
+    }
+  ]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+
+      <h1>#todo</h1>
+
+      <ul className = "filter-buttons-container">
+        <li><button>All</button></li>
+        <li ><button className = "active">Active</button></li>
+        <li><button >Completed</button></li>
+      </ul> 
+
+      <Form data = {state} setState ={setState}/>
+
+      <ToDoList data = {state} />
     </div>
   );
 }

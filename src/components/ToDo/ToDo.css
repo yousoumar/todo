@@ -1,0 +1,10 @@
+.to-do input,
+.to-do label{
+    display: inline-block;
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-right: .4rem;
+}
+.to-do input:checked + label{
+    text-decoration: line-through;
+}
