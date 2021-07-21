@@ -1,17 +1,22 @@
 import './ToDoList.css';
 import ToDo from '../ToDo/ToDo';
 
-
-export default function ToDoList(props) {
+export default function ToDoList({data, updateData}) {
     function updateToDoList(id){
-        const newData = props.data.filter(todo => todo.id !== id);
-        props.updateData(newData);
+        const newData = data.filter(todo => todo.id !== id);
+        updateData(newData);
     }
     return (
         <ul className = "to-do-list">
+            
             {
-                
-                props.data.map(item => <ToDo ToDoData = {item} key = {item.id} updateToDoList = {updateToDoList}/>)    
+                data.length !== 0 ?
+                                    data.map(item => <ToDo ToDoData = {item} key = {item.id} updateToDoList = {updateToDoList}/>) 
+                                  :
+                                    <p className = "void-list">
+                                         You have no task at the moment.👏🏼 
+                                    </p>  
+                                    
             }
             
         </ul>

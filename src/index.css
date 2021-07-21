@@ -24,6 +24,10 @@ button,input,label{
 button{
   cursor: pointer;
 }
+img{
+  display: block;
+  width: 100%;
+}
 ul{
   list-style: none;
 }

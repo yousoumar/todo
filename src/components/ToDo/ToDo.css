@@ -7,12 +7,18 @@
 .to-do input,
 .to-do label{
     display: inline-block;
-    font-weight: 500;
-    font-size: 1.1rem;
-    margin-right: .4rem;
+ 
+}
+.to-do input{
+    cursor: pointer;
 }
 .to-do input:checked + label{
     text-decoration: line-through;
+}
+.to-do label{
+    font-weight: 500;
+    font-size: 1.1rem;
+    margin-left: .4rem;
 }
 .to-do button{
     width: 1rem;
