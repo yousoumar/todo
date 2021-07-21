@@ -5,7 +5,7 @@ import {useState} from 'react';
 export default function Form(props) {
 
     // on input 
-    let [inputState, inputSetState] = useState();
+    const [inputState, inputSetState] = useState();
     const handleInput = (e) => {
         inputSetState(e.currentTarget.value);
     }

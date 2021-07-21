@@ -32,7 +32,7 @@ function App() {
 
       <Form data = {state} setState ={setState}/>
 
-      <ToDoList data = {state} />
+      <ToDoList data = {state} updateData = {setState}/>
     </div>
   );
 }

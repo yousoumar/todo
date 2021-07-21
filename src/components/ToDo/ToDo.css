@@ -1,3 +1,9 @@
+.to-do{
+    position: relative;
+}
+.to-do:not(:last-child){
+    margin-bottom: 1.5rem;
+}
 .to-do input,
 .to-do label{
     display: inline-block;
@@ -7,4 +13,11 @@
 }
 .to-do input:checked + label{
     text-decoration: line-through;
+}
+.to-do button{
+    width: 1rem;
+    display: inline-block;
+    margin-left: auto;
+    position: absolute;
+    right: 0;
 }

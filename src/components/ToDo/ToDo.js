@@ -1,11 +1,19 @@
 import './ToDo.css';
+import trash from './trash.svg'
 
 
-const ToDo = ({ToDoData}) => {
+const ToDo = ({ToDoData, updateToDoList}) => {
+
+    function handleClick(id){
+        updateToDoList(id);
+    }
     return (
-        <li className = "to-do">
+        <li className = "to-do" id = {ToDoData.id}>
             <input type="checkbox" id = {ToDoData.id}  /> 
             <label htmlFor={ToDoData.id}>{ToDoData.content}</label>
+            <button onClick = { e => handleClick(e.currentTarget.parentElement.id)}>
+                <img src={trash} alt = "trash "/>
+            </button>
         </li>
     )
 }
