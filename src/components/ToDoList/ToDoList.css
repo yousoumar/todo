@@ -1,9 +1,34 @@
+.to-do-list-container{
+    display: flex;
+    flex-direction: column;
+}
 .void-list{
     text-align: center;
-    font-size: 1.5rem;
     margin-top: 3rem;
 }
-.void-list img{
-    opacity: .1;
-    margin-top: 3rem;
+.delete-all{
+    width: 7.75rem;
+    height: 2.5rem;
+    margin: 2.3rem 0  0 auto;
+    background: #EB5757;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: .9rem;
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.delete-all span {
+    display: block;
+   
+    
+}
+
+.delete-all span:first-child {
+    margin-right: .5rem;
+    width: .7rem;
+    
 }

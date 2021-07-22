@@ -1,24 +1,37 @@
 import './ToDoList.css';
 import ToDo from '../ToDo/ToDo';
+import trash from '../../assets/trash.svg'
 
-export default function ToDoList({data, updateData}) {
-    function updateToDoList(id){
-        const newData = data.filter(todo => todo.id !== id);
-        updateData(newData);
+export default function ToDoList({state, setState}) {
+    function deleteToDo(id){
+        const newState = state.filter(todo => todo.id !== id);
+        setState(newState);
+    }
+    function deleteToDoList(){
+        setState('');
     }
     return (
-        <ul className = "to-do-list">
+        <div className = "to-do-list-container">
+            <ul className = "to-do-list">
             
+                {
+                    state.length !== 0 ?
+                                        state.map(item => <ToDo ToDoData = {item} key = {item.id} deleteToDo = {deleteToDo}/>) 
+                                    :
+                                        <p className = "void-list">
+                                            You have no task at the moment.
+                                        </p>  
+                                        
+                }
+                
+            </ul>
             {
-                data.length !== 0 ?
-                                    data.map(item => <ToDo ToDoData = {item} key = {item.id} updateToDoList = {updateToDoList}/>) 
-                                  :
-                                    <p className = "void-list">
-                                         You have no task at the moment.👏🏼 
-                                    </p>  
-                                    
+                state.length >= 2 && 
+                <button className="delete-all" onClick = {()=>{deleteToDoList()}}>
+                    <span><img src={trash} alt="trash" /></span> <span>delete all</span> 
+                </button>
             }
-            
-        </ul>
+        </div>
+        
     )
 }

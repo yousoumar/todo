@@ -1,5 +1,6 @@
 .to-do{
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
 }
 .to-do:not(:last-child){
     margin-bottom: 1.5rem;
@@ -22,8 +23,6 @@
 }
 .to-do button{
     width: 1rem;
-    display: inline-block;
     margin-left: auto;
-    position: absolute;
-    right: 0;
+    overflow: hidden;
 }

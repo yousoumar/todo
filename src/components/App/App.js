@@ -1,6 +1,6 @@
 import './App.css';
-import Form from './components/Form/Form';
-import ToDoList from './components/ToDoList/ToDoList';
+import Form from '../Form/Form';
+import ToDoList from '../ToDoList/ToDoList';
 import {useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -30,9 +30,9 @@ function App() {
         <li><button >Completed</button></li>
       </ul> 
 
-      <Form data = {state} setState ={setState}/>
+      <Form state = {state} setState ={setState}/>
 
-      <ToDoList data = {state} updateData = {setState}/>
+      <ToDoList state = {state} setState = {setState}/>
     </div>
   );
 }
