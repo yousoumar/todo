@@ -5,8 +5,25 @@ import {useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
+  const initialState = [
+    {
+      content : "Do coding challenges",
+      id : uuidv4(),
+      completed : false
+    },
+    {
+      content : "Drink coffee",
+      id : uuidv4(),
+      completed : false
+    },
+    {
+      content : "Listen to music",
+      id : uuidv4(),
+      completed : false
+    }
+  ];
   const [state, setState] = useState(JSON.parse(localStorage.getItem('state')));
-  console.log(state)
+  
   const [toggleState, toggleSetState] = useState('all');
   function handleToggle(e){
     toggleSetState(e.currentTarget.classList[0]);
@@ -25,51 +42,15 @@ function App() {
       </ul> 
 
       <Form 
-        state = {state ? state : [
-                                    {
-                                      content : "Do coding challenges",
-                                      id : uuidv4(),
-                                      completed : false
-                                    },
-                                    {
-                                      content : "Drink coffee",
-                                      id : uuidv4(),
-                                      completed : false
-                                    },
-                                    {
-                                      content : "Listen to music",
-                                      id : uuidv4(),
-                                      completed : false
-                                    }
-                                    ]
-                }
+        state = {state ? state : initialState}
          setState ={setState} 
          toggleSetState ={toggleSetState}
-         
       />
 
       <ToDoList 
-        state = {state ? state : [
-                                    {
-                                      content : "Do coding challenges",
-                                      id : uuidv4(),
-                                      completed : false
-                                    },
-                                    {
-                                      content : "Drink coffee",
-                                      id : uuidv4(),
-                                      completed : false
-                                    },
-                                    {
-                                      content : "Listen to music",
-                                      id : uuidv4(),
-                                      completed : false
-                                    }
-                                    ]
-                }
+        state = {state ? state : initialState}
          setState ={setState} 
          toggleState ={toggleState}
-         
       />
 
 
