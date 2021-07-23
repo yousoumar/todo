@@ -1,7 +1,7 @@
 import './App.css';
 import Form from '../Form/Form';
 import ToDoList from '../ToDoList/ToDoList';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
@@ -22,9 +22,8 @@ function App() {
       completed : false
     }
   ]);
-  const [toggleState, toggleSetState] = useState('all');
   
- 
+  const [toggleState, toggleSetState] = useState('all');
   function handleToggle(e){
     toggleSetState(e.currentTarget.classList[0]);
   }
