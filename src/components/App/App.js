@@ -22,21 +22,12 @@ function App() {
       completed : false
     }
   ]);
-  const [toggleState, toggleSetStae] = useState('all');
+  const [toggleState, toggleSetState] = useState('all');
   
-  useEffect(()=>{
-    const toglers = document.querySelectorAll('.toggler');
-    toglers.forEach(togler => {
-      togler.addEventListener('click', (e)=>{
-        toglers.forEach(togler => togler.classList.remove('active'));
-        e.currentTarget.classList.add('active');
-        toggleSetStae(e.currentTarget.classList[0]);
-       
-      });
-    });
-    
-  }, [toggleState]);
  
+  function handleToggle(e){
+    toggleSetState(e.currentTarget.classList[0]);
+  }
   return (
     
     <>
@@ -44,12 +35,12 @@ function App() {
       <h1>#todo</h1>
 
       <ul className = "filter-buttons-container">
-        <li><button className = "all active toggler">All</button></li>
-        <li ><button className = "not-completed toggler">Active</button></li>
-        <li><button className = "completed toggler" >Completed</button></li>
+        <li><button className = {toggleState === "all" ? "all active " : "all " } onClick ={(e)=>{handleToggle(e)}}>All</button></li>
+        <li ><button className = {toggleState === "no-completed" ? "no-completed active " : "no-completed " } onClick ={(e)=>{handleToggle(e)}}>Active</button></li>
+        <li><button className = {toggleState === "completed" ? "completed active " : "completed " } onClick ={(e)=>{handleToggle(e)}}>Completed</button></li>
       </ul> 
 
-      <Form state = {state} setState ={setState}/>
+      <Form state = {state} setState ={setState} toggleSetState ={toggleSetState}/>
 
       <ToDoList state = {state} setState = {setState} toggleState = {toggleState}/>
 

@@ -17,7 +17,7 @@ export default function Form(props) {
             const newState = [...props.state, {content : inputState, id : uuidv4(), completed : false}];
             props.setState(newState);
         }
-     
+        props.toggleSetState("all");
         inputSetState('');
     }
     
