@@ -1,11 +1,3 @@
-.to-do-list-container{
-    display: flex;
-    flex-direction: column;
-}
-.void-list{
-    text-align: center;
-    margin-top: 3rem;
-}
 .delete-all{
     width: 7.75rem;
     height: 2.5rem;

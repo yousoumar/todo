@@ -44,7 +44,7 @@ export default function ToDoList({state, setState, toggleState}) {
           
     }
     return (
-        <div className = "to-do-list-container">
+        <div >
             <ul className = "to-do-list">
             
                 {
