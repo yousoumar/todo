@@ -22,7 +22,7 @@ function App() {
       completed : false
     }
   ]);
-  
+
   const [toggleState, toggleSetState] = useState('all');
   function handleToggle(e){
     toggleSetState(e.currentTarget.classList[0]);
@@ -44,7 +44,7 @@ function App() {
       <ToDoList state = {state} setState = {setState} toggleState = {toggleState}/>
 
       <footer>
-        created by <a href="https://devchallenges.io/portfolio/yousoumar" target ="_blank">yousoumar</a> - devChallenges.io
+        created by <a href="https://devchallenges.io/portfolio/yousoumar" target ="_blank" rel="noreferrer">yousoumar</a> - devChallenges.io
       </footer>
     </>
   );

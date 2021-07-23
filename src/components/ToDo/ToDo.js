@@ -11,7 +11,7 @@ const ToDo = ({ToDoData, deleteToDo, toggleState, checkToDo}) => {
                     type="checkbox" 
                     checked = {ToDoData.completed ? "checked" : ""}
                 /> 
-                <label htmlFor = {ToDoData.id}>{ToDoData.content}</label>
+                <label>{ToDoData.content}</label>
             </div>
             
             {

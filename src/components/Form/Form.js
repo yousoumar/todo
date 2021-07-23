@@ -26,10 +26,7 @@ export default function Form(props) {
             <input type="text" 
                 placeholder = "add task" 
                 onInput = {e => handleInput(e)}
-                
                 value = {inputState}
-                
- 
             />
             <button type="submit">Add</button>
       </form>
