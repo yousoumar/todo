@@ -23,6 +23,7 @@ function App() {
     }
   ]);
   const [toggleState, toggleSetStae] = useState('all');
+  
   useEffect(()=>{
     const toglers = document.querySelectorAll('.toggler');
     toglers.forEach(togler => {
@@ -33,8 +34,11 @@ function App() {
        
       });
     });
-  });
+    
+  }, [toggleState]);
+ 
   return (
+    
     <>
 
       <h1>#todo</h1>

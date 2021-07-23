@@ -9,7 +9,7 @@ const ToDo = ({ToDoData, deleteToDo, toggleState, checkToDo}) => {
             <div className="input-label-container">
                 <input 
                     type="checkbox" 
-                    defaultChecked = {ToDoData.completed ? "checked" : ""}
+                    checked = {ToDoData.completed ? "checked" : ""}
                 /> 
                 <label htmlFor = {ToDoData.id}>{ToDoData.content}</label>
             </div>
