@@ -35,7 +35,7 @@ function App() {
     });
   });
   return (
-    <div className="app">
+    <>
 
       <h1>#todo</h1>
 
@@ -48,7 +48,11 @@ function App() {
       <Form state = {state} setState ={setState}/>
 
       <ToDoList state = {state} setState = {setState} toggleState = {toggleState}/>
-    </div>
+
+      <footer>
+        created by <a href="https://devchallenges.io/portfolio/yousoumar" target ="_blank">yousoumar</a> - devChallenges.io
+      </footer>
+    </>
   );
 }
 
