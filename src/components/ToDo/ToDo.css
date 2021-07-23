@@ -1,6 +1,7 @@
 .to-do{
     display: flex;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 .to-do:not(:last-child){
     margin-bottom: 1.5rem;
@@ -8,11 +9,10 @@
 .to-do input,
 .to-do label{
     display: inline-block;
+    cursor: inherit;
  
 }
-.to-do input{
-    cursor: pointer;
-}
+
 .to-do input:checked + label{
     text-decoration: line-through;
 }

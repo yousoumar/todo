@@ -13,7 +13,7 @@ form input{
 input::placeholder{
     font-family: inherit;
     font-size: .9rem;
-    color: #828282;
+    color: inherit;
 }
 form input:focus{
     border: 2px solid #2F80ED;
@@ -22,6 +22,6 @@ form button{
     background-color:#2F80ED;
     width: 6.8rem;
     border-radius: 12px;
-    color: #FFFFFF;
+    color: inherit;
     font-size: .9rem;
 }

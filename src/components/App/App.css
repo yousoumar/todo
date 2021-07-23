@@ -3,12 +3,10 @@
     grid-template-rows: 1fr auto;
   }
   h1{
-    font-family: 'Raleway', sans-serif; 
     font-weight: bold;
     font-size: 2.25rem;
     text-align: center;
     letter-spacing: -0.045em;
-    color: #333333;
     margin-bottom: 3.6rem;
   }
  
@@ -16,7 +14,6 @@
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    font-family: 'Montserrat', sans-serif;
     border-bottom: 1px solid #BDBDBD;
   }
   .filter-buttons-container button{

@@ -1,18 +1,14 @@
 import './Form.css'
 import { v4 as uuidv4 } from 'uuid';
-import {useState, useRef, useEffect} from 'react';
+import {useState} from 'react';
 
 export default function Form(props) {
-    const ref = useRef([]);
+
     // on input 
-    let myInput;
-    const [inputState, inputSetState] = useState();
+    const [inputState, inputSetState] = useState('');
     const handleInput = (e) => {
         inputSetState(e.currentTarget.value);
     }
-    useEffect(()=>{
-        myInput = ref.current;
-    },[inputState]);
 
      // on submit
      const addToDo = (e) =>{
@@ -22,7 +18,7 @@ export default function Form(props) {
             props.setState(newState);
         }
      
-        myInput.value = "";  
+        inputSetState('');
     }
     
     return (
@@ -30,7 +26,9 @@ export default function Form(props) {
             <input type="text" 
                 placeholder = "add task" 
                 onInput = {e => handleInput(e)}
-                ref = {ref}
+                
+                value = {inputState}
+                
  
             />
             <button type="submit">Add</button>

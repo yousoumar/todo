@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Raleway:wght@700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap);
 
 *, *::after, *::before{
   padding: 0;
@@ -7,10 +7,12 @@
 }
 body{
   min-height: 100vh;
-  max-width: 50rem;
+  max-width: 40rem;
   margin: 0 auto;
   padding: 2rem 1rem;
-  font-family: Montserrat;
+  font-family: 'Nova Mono', monospace;
+  background-color: rgba(40, 40, 40, 40);
+  color: #FFF;
 
 }
 button,input,label{
@@ -20,6 +22,7 @@ button,input,label{
   background-color: transparent;
   font-family: inherit;
   font-size: inherit;
+  color: inherit;
 }
 button{
   cursor: pointer;
