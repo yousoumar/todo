@@ -6,7 +6,7 @@ Il s'agit là d'une `application todo liste`. C'est un challenge <a href = "http
 * Ajouter une tâche
 * Marquer une tâche comme accomplie
 * Supprimer une tâche accomplie
-* Avoir un button pour supprimer tous les tâches accomplies, bouton qui apparait lorsque cette liste contient plus d’un élément
+* Avoir un button pour supprimer toutes les tâches accomplies, bouton qui apparait lorsque cette liste contient plus d’un élément
 
 ## Développement
 
