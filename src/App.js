@@ -1,6 +1,6 @@
 import './App.css';
-import Form from '../Form/Form';
-import ToDoList from '../ToDoList/ToDoList';
+import Form from './components/Form/Form';
+import ToDoList from './components/ToDoList/ToDoList';
 import {useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
