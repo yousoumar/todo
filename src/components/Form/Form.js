@@ -14,7 +14,7 @@ export default function Form(props) {
      const addToDo = (e) =>{
         e.preventDefault();
         if (inputState){
-            const newState = [...props.state, {content : inputState, id : uuidv4()}];
+            const newState = [...props.state, {content : inputState, id : uuidv4(), completed : false}];
             props.setState(newState);
         }
      
