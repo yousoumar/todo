@@ -16,10 +16,7 @@ body{
   display: flex;
 }
 
-.loaded body::after{
-  
-  display: none;
-}
+
 #root{
   width: 100%;
   display: grid;
