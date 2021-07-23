@@ -5,6 +5,11 @@ import {useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
+
+  // what contains and updates the task list
+  const [state, setState] = useState(JSON.parse(localStorage.getItem('state')));
+
+  // in case we have nothing in local storage
   const initialState = [
     {
       content : "Do coding challenges",
@@ -22,8 +27,8 @@ function App() {
       completed : false
     }
   ];
-  const [state, setState] = useState(JSON.parse(localStorage.getItem('state')));
-  
+
+  // what allows to navigate between all, active, and completed tasks
   const [toggleState, toggleSetState] = useState('all');
   function handleToggle(e){
     toggleSetState(e.currentTarget.classList[0]);
