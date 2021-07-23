@@ -12,7 +12,7 @@ Il s'agit là d'une `application todo liste`. C'est un challenge <a href = "http
 
 Ce projet est réalisé avec `HTML`, `CSS`, `JavaScript` et `React`, avec les dépendences `react`, `react-dom` et `uuid`.
 
-Note : J’utilise `localStorage` pour garder la liste de tâches même après la fermeture de l’application.
+Note : J’utilise le `stockage local` pour garder la liste de tâches même après la fermeture de l’application.
 
 ## Démonstration
 
