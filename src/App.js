@@ -48,14 +48,14 @@ function App() {
 
       <Form 
         state = {state ? state : initialState}
-         setState ={setState} 
-         toggleSetState ={toggleSetState}
+        setState ={setState} 
+        toggleSetState ={toggleSetState}
       />
 
       <ToDoList 
         state = {state ? state : initialState}
-         setState ={setState} 
-         toggleState ={toggleState}
+        setState ={setState} 
+        toggleState ={toggleState}
       />
 
 
