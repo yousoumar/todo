@@ -5,6 +5,7 @@ import trash from '../../assets/trash.svg'
 export default function ToDoList({state, setState, toggleState}) {
     function deleteToDo(id){
         const newState = state.filter(todo => todo.id !== id);
+        localStorage.setItem('state', JSON.stringify(newState));
         setState(newState);
     }
     function checkToDo(id){
@@ -12,11 +13,13 @@ export default function ToDoList({state, setState, toggleState}) {
         const newState = state.slice();
         const todo = newState.find(todo => todo.id === id);
         todo.completed = !todo.completed;
+        localStorage.setItem('state', JSON.stringify(newState));
         setState(newState);
    
     }
     function deleteCompletedToDoList(){
         const newState = state.filter(todo => todo.completed === false);
+        localStorage.setItem('state', JSON.stringify(newState));
         setState(newState);
     }
     function displayToDoList(state){

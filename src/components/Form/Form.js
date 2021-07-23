@@ -15,6 +15,7 @@ export default function Form(props) {
         e.preventDefault();
         if (inputState){
             const newState = [...props.state, {content : inputState, id : uuidv4(), completed : false}];
+            localStorage.setItem('state', JSON.stringify(newState));
             props.setState(newState);
         }
         props.toggleSetState("all");

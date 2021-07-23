@@ -5,28 +5,13 @@ import {useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
 function App() {
-  const [state, setState] = useState([
-    {
-      content : "Do coding challenges",
-      id : uuidv4(),
-      completed : false
-    },
-    {
-      content : "Drink coffee",
-      id : uuidv4(),
-      completed : false
-    },
-    {
-      content : "Listen to music",
-      id : uuidv4(),
-      completed : false
-    }
-  ]);
-
+  const [state, setState] = useState(JSON.parse(localStorage.getItem('state')));
+  console.log(state)
   const [toggleState, toggleSetState] = useState('all');
   function handleToggle(e){
     toggleSetState(e.currentTarget.classList[0]);
   }
+ 
   return (
     
     <>
@@ -39,9 +24,54 @@ function App() {
         <li><button className = {toggleState === "completed" ? "completed active " : "completed " } onClick ={(e)=>{handleToggle(e)}}>Completed</button></li>
       </ul> 
 
-      <Form state = {state} setState ={setState} toggleSetState ={toggleSetState}/>
+      <Form 
+        state = {state ? state : [
+                                    {
+                                      content : "Do coding challenges",
+                                      id : uuidv4(),
+                                      completed : false
+                                    },
+                                    {
+                                      content : "Drink coffee",
+                                      id : uuidv4(),
+                                      completed : false
+                                    },
+                                    {
+                                      content : "Listen to music",
+                                      id : uuidv4(),
+                                      completed : false
+                                    }
+                                    ]
+                }
+         setState ={setState} 
+         toggleSetState ={toggleSetState}
+         
+      />
 
-      <ToDoList state = {state} setState = {setState} toggleState = {toggleState}/>
+      <ToDoList 
+        state = {state ? state : [
+                                    {
+                                      content : "Do coding challenges",
+                                      id : uuidv4(),
+                                      completed : false
+                                    },
+                                    {
+                                      content : "Drink coffee",
+                                      id : uuidv4(),
+                                      completed : false
+                                    },
+                                    {
+                                      content : "Listen to music",
+                                      id : uuidv4(),
+                                      completed : false
+                                    }
+                                    ]
+                }
+         setState ={setState} 
+         toggleState ={toggleState}
+         
+      />
+
 
       <footer>
         created by <a href="https://devchallenges.io/portfolio/yousoumar" target ="_blank" rel="noreferrer">yousoumar</a> - devChallenges.io
