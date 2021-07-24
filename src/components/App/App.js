@@ -1,6 +1,6 @@
 import './App.css';
-import Form from './components/Form/Form';
-import ToDoList from './components/ToDoList/ToDoList';
+import Form from './../Form/Form';
+import ToDoList from './../ToDoList/ToDoList';
 import {useState} from 'react';
 import { v4 as uuidv4 } from 'uuid';
 
@@ -60,7 +60,7 @@ function App() {
 
 
       <footer>
-        created by <a href="https://devchallenges.io/portfolio/yousoumar" target ="_blank" rel="noreferrer">yousoumar</a> - devChallenges.io
+        created by <a href="https://github.com/yousoumar" target ="_blank" rel="noreferrer">yousoumar</a> - devChallenges.io
       </footer>
     </>
   );
