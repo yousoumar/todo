@@ -1,12 +1,9 @@
 .delete-all{
-    width: 7.75rem;
-    height: 2.5rem;
+    padding: 1rem;
     margin: 2.3rem 0  0 auto;
     background: #EB5757;
     border-radius: 4px;
-    font-weight: 600;
     font-size: .9rem;
-    color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;

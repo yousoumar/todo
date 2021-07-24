@@ -10,8 +10,8 @@ export default function Form(props) {
         inputSetState(e.currentTarget.value);
     }
 
-     // on submit
-     const addToDo = (e) =>{
+    // on submit
+    const addToDo = (e) =>{
         e.preventDefault();
         if (inputState){
             const newState = [...props.state, {content : inputState, id : uuidv4(), completed : false}];
@@ -25,11 +25,11 @@ export default function Form(props) {
     return (
         <form onSubmit = {(e) => addToDo(e)}>
             <input type="text" 
-                placeholder = "add task" 
+                placeholder = "Nouvelle tâche" 
                 onInput = {e => handleInput(e)}
                 value = {inputState}
             />
-            <button type="submit">Add</button>
+            <button type="submit">Ajouter</button>
       </form>
     )
 }

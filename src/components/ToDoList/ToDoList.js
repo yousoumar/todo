@@ -56,7 +56,7 @@ export default function ToDoList({state, setState, toggleState}) {
             {
                 (toDolistFilter(state, toggleState).length >= 2 && toggleState === "completed") && 
                 <button className="delete-all" onClick = {()=>{deleteCompletedToDoList()}}>
-                    <span><img src={trash} alt="trash" /></span> <span>delete all</span> 
+                    <span><img src={trash} alt="trash" /></span> <span>Tout supprimer</span> 
                 </button>
             }
         </div>
