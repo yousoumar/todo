@@ -13,7 +13,7 @@ function App() {
   // in case we have nothing in local storage
   const initialState = [
     {
-      content : "Apprendre React",
+      content : "Coder un nouveau projet",
       id : uuidv4(),
       completed : false
     },
@@ -21,12 +21,12 @@ function App() {
     {
       content : "Boire du café",
       id : uuidv4(),
-      completed : false
+      completed : true
     },
     {
       content : "Ecouter de la musique",
       id : uuidv4(),
-      completed : false
+      completed : true
     }
   ];
 
@@ -39,13 +39,10 @@ function App() {
   // what allows us to handle our loader
   const [loaderState, loaderSetState] = useState('');
   useEffect(() => {
-    const timer = setTimeout(()=>{
+      setTimeout(()=>{
       loaderSetState('loaded')
-    }, 2000)
-    return () => {
-      clearTimeout(timer)
-    }
-  }, [])
+    }, 2000);
+  }, []);
 
   return (
     
@@ -54,9 +51,9 @@ function App() {
         <h1>#todo</h1>
 
         <ul className = "filter-buttons-container">
-          <li><button className = {toggleState === "all" ? "all active " : "all " } onClick ={(e)=>{handleToggle(e)}}>All</button></li>
-          <li ><button className = {toggleState === "no-completed" ? "no-completed active " : "no-completed " } onClick ={(e)=>{handleToggle(e)}}>Active</button></li>
-          <li><button className = {toggleState === "completed" ? "completed active " : "completed " } onClick ={(e)=>{handleToggle(e)}}>Completed</button></li>
+          <li><button className = {toggleState === "all" ? "all active " : "all " } onClick ={(e)=>{handleToggle(e)}}>Toutes</button></li>
+          <li ><button className = {toggleState === "no-completed" ? "no-completed active " : "no-completed " } onClick ={(e)=>{handleToggle(e)}}>Actives</button></li>
+          <li><button className = {toggleState === "completed" ? "completed active " : "completed " } onClick ={(e)=>{handleToggle(e)}}>Completées</button></li>
         </ul> 
 
         <Form 

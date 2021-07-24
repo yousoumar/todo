@@ -1,6 +1,6 @@
 # Todo app
 
-Il s'agit là d'une `application todo liste`. C'est un challenge <a href = "https://devchallenges.io/challenges/hH6PbOHBdPm6otzw2De5">`challenge`</a> de `devchallenge.io`.
+Il s'agit là d'une `todo liste`, mais pas que ! Il faudrait visiter pour savoir.😁 
 
 ## Fonctionnalités
 * Ajouter une tâche
@@ -19,6 +19,7 @@ Note : J’utilise le `stockage local` pour garder la liste de tâches même apr
 Vous pouvez visiter en cliquant sur l'image ci-dessous ou sur le lien en bas de la section `About`.
 
 `Design de base récupéré chez devchallenge.io, adapté à mes goûts par mes soins !`
+
 <a href = "https://yousoumar.github.io/todo/"><img src = "screenshot.png"></img></a>
 
 
