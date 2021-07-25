@@ -6,7 +6,7 @@ form{
 }
 form input{
     border: 1px solid #BDBDBD;
-    border-radius: 12px;
+    border-radius: 10px;
     width: calc(100% - 8.4rem);
     padding: 1.125rem .75rem;   
 }
@@ -17,11 +17,4 @@ input::placeholder{
 }
 form input:focus{
     border: 2px solid #2F80ED;
-}
-form button{
-    background-color:#2F80ED;
-    width: 6.8rem;
-    border-radius: 12px;
-    color: inherit;
-    font-size: .9rem;
 }

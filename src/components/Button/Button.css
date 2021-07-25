@@ -1,0 +1,17 @@
+.button{
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.delete{
+    margin: 2.3rem 0  0 auto;
+}
+.button span{
+    display: block;
+}
+.button span:first-child {
+    margin-right: .5rem;
+    width: .7rem;
+    
+}

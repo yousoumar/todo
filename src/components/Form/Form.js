@@ -1,4 +1,5 @@
 import './Form.css'
+import Button from '../Button/Button';
 import { v4 as uuidv4 } from 'uuid';
 import {useState} from 'react';
 
@@ -17,8 +18,9 @@ export default function Form(props) {
             const newState = [...props.state, {content : inputState, id : uuidv4(), completed : false}];
             localStorage.setItem('state', JSON.stringify(newState));
             props.setState(newState);
+            props.toggleSetState("all");
         }
-        props.toggleSetState("all");
+        
         inputSetState('');
     }
     
@@ -29,7 +31,15 @@ export default function Form(props) {
                 onInput = {e => handleInput(e)}
                 value = {inputState}
             />
-            <button type="submit">Ajouter</button>
+            <Button 
+                type = "submit" 
+                backgroundColor = "#2F80ED"
+                width = "6.8rem"
+                fontSize = ".9rem"   
+            >
+                Ajouter
+            </Button>
+           
       </form>
     )
 }

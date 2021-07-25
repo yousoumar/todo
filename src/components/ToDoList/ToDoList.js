@@ -1,6 +1,7 @@
 import './ToDoList.css';
 import ToDo from '../ToDo/ToDo';
-import trash from '../../assets/trash.svg'
+import trash from '../../assets/trash.svg';
+import Button from '../Button/Button';
 
 export default function ToDoList({state, setState, toggleState}) {
     function deleteToDo(id){
@@ -55,9 +56,15 @@ export default function ToDoList({state, setState, toggleState}) {
             </ul>
             {
                 (toDolistFilter(state, toggleState).length >= 2 && toggleState === "completed") && 
-                <button className="delete-all" onClick = {()=>{deleteCompletedToDoList()}}>
-                    <span><img src={trash} alt="trash" /></span> <span>Tout supprimer</span> 
-                </button>
+                <Button 
+                    class="delete" 
+                    icon = {trash} 
+                    backgroundColor = "#EB5757" 
+                    padding = "1rem"
+                    handleClick = {deleteCompletedToDoList}
+                >
+                    Tout supprimer
+                </Button>
             }
         </div>
         
