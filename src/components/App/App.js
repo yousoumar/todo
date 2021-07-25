@@ -13,7 +13,7 @@ function App() {
   // in case we have nothing in local storage
   const initialState = [
     {
-      content : "Coder un nouveau projet",
+      content : "Apprendre React",
       id : uuidv4(),
       completed : false
     },
