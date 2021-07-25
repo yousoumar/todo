@@ -47,33 +47,53 @@ function App() {
   return (
     
     <>
-      {loaderState === 'loaded' ? <>
-        <h1>#todo</h1>
+      {loaderState === '' ? <Loader/> : <>
+                                          <h1>#todo</h1>
 
-        <ul className = "filter-buttons-container">
-          <li><button className = {toggleState === "all" ? "all active " : "all " } onClick ={(e)=>{handleToggle(e)}}>Toutes</button></li>
-          <li ><button className = {toggleState === "no-completed" ? "no-completed active " : "no-completed " } onClick ={(e)=>{handleToggle(e)}}>Actives</button></li>
-          <li><button className = {toggleState === "completed" ? "completed active " : "completed " } onClick ={(e)=>{handleToggle(e)}}>Completées</button></li>
-        </ul> 
+                                          <ul className = "toggler-container">
+                                            <li>
+                                              <button 
+                                                className = {toggleState === "all" ? "all active " : "all " } 
+                                                onClick ={(e)=>{handleToggle(e)}}
+                                              >
+                                                Toutes
+                                              </button></li>
+                                            <li >
+                                              <button 
+                                                className = {toggleState === "no-completed" ? "no-completed active " : "no-completed " } 
+                                                onClick ={(e)=>{handleToggle(e)}}
+                                              >
+                                                Actives
+                                              </button>
+                                            </li>
+                                            <li>
+                                              <button 
+                                                className = {toggleState === "completed" ? "completed active " : "completed " } 
+                                                onClick ={(e)=>{handleToggle(e)}}
+                                              >
+                                                Completées
+                                              </button>
+                                            </li>
+                                          </ul> 
 
-        <Form 
-          state = {state ? state : initialState}
-          setState ={setState} 
-          toggleSetState ={toggleSetState}
-        />
+                                          <Form 
+                                            state = {state ? state : initialState}
+                                            setState ={setState} 
+                                            toggleSetState ={toggleSetState}
+                                          />
 
-        <ToDoList 
-          state = {state ? state : initialState}
-          setState ={setState} 
-          toggleState ={toggleState}
-        />
+                                          <ToDoList 
+                                            state = {state ? state : initialState}
+                                            setState ={setState} 
+                                            toggleState ={toggleState}
+                                          />
 
 
-        <footer>
-          created by <a href="https://github.com/yousoumar" target ="_blank" rel="noreferrer">yousoumar</a> - devChallenges.io
-        </footer>
-        </>
-       : <Loader/>
+                                          <footer>
+                                            created by <a href="https://github.com/yousoumar" target ="_blank" rel="noreferrer">yousoumar</a> - devChallenges.io
+                                          </footer>
+                                        </>
+       
       }
     </>
    
