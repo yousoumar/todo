@@ -14,7 +14,7 @@ export default function Form(props) {
     // on submit
     const addToDo = (e) =>{
         e.preventDefault();
-        if (inputState){
+        if (inputState.trim()){
             const newState = [...props.state, {content : inputState, id : uuidv4(), completed : false}];
             localStorage.setItem('state', JSON.stringify(newState));
             props.setState(newState);
