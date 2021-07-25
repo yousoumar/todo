@@ -1,18 +1,14 @@
-@import url(https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap);
-
 *, *::after, *::before{
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-/*background-color is defined in index.html, to have it as quick as possible*/
+/*background-color, font-family, and color are defined in index.html, to have them as quick as possible*/
 body{
   min-height: 100vh;
   max-width: 40rem;
   margin: 0 auto;
   padding: 2rem 1rem;
-  font-family: 'Nova Mono', monospace;
-  color: #FFF;
   display: flex;
 }
 
