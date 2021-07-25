@@ -5,6 +5,7 @@
   margin: 0;
   box-sizing: border-box;
 }
+/*background-color is defined in index.html, to have it as quick as possible*/
 body{
   min-height: 100vh;
   max-width: 40rem;
