@@ -12,5 +12,17 @@
     padding-bottom: 12rem;
 }
 .loader h1{
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+}
+
+.loader .circle{
+    width: 2rem;
+    margin-top: 2rem;
+    animation: turn 2s ease infinite;
+}
+
+@keyframes turn {
+    100%{
+        transform: rotate(360deg);
+    }
 }
