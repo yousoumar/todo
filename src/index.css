@@ -3,7 +3,13 @@
   margin: 0;
   box-sizing: border-box;
 }
-/*background-color, font-family, and color are defined in index.html, to have them as quick as possible*/
+@import url(https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap);
+
+html{
+  background-color: #282828;
+  color: #FFF;
+  font-family: 'Nova Mono', monospace;
+}
 body{
   min-height: 100vh;
   max-width: 40rem;
